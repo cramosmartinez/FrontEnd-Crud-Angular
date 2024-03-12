@@ -1,4 +1,26 @@
 <div class="container">
-    <h4>Listado De Producto</h4>
-
+  <h4>Listado De Producto</h4>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Stock</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listProducts" class="table-active">
+        <th>{{ item.name}}</th>
+        <td>{{ item.description}}</td>
+        <td>{{ item.price}}</td>
+        <td>{{ item.stock}}</td>
+        <td>
+            <button class="btn btn-danger">Eliminar</button>
+            <button class="btn btn-warning">Editar</button>
+        </td>
+        
+    </tbody>
+  </table>
 </div>
